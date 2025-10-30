@@ -1,0 +1,60 @@
+# Archivos específicos del sistema operativo
+.DS_Store
+*.orig
+*.bak
+
+# Carpetas y archivos de Android Studio / IDE
+# Directorio que almacena los ajustes del proyecto de IntelliJ/Android Studio
+.idea/
+
+# Gradle
+# Archivos de caché
+.gradle
+
+# Archivos de construcción generados
+# Directorio de salida de la construcción para módulos (e.g., app/build/)
+build/
+
+# Archivos generados dentro de los módulos
+*/build/
+
+# Archivos de configuración local de la máquina virtual (JVM)
+local.properties
+
+# Archivos de prueba (opcional, pero común)
+captures/
+
+# Archivos de Android Studio específicos del usuario
+.externalNativeBuild/
+.cxx/
+*.iml
+*.iws
+*.ipr
+
+# Archivos de Android (específicos del sistema de construcción)
+# Todos los APKs, AABs, y archivos generados similares
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+*.aar
+# Log de depuración
+proguard/
+lint-results.html
+lint-results.xml
+mapping/
+
+# Directorios "generated"
+# Estos corresponden a carpetas como 'java (generated)' o 'res (generated)'
+# que están dentro de carpetas de código fuente (e.g., app/src/main/)
+# Es mejor ignorar el contenido de los directorios de salida de compilación (como 'build/')
+# pero a veces el IDE los puede mostrar en la estructura de una manera especial.
+# Si estos directorios 'generated' están dentro de 'build/', ya están ignorados.
+# Si no lo están (lo cual es raro para una estructura estándar),
+# podrías añadir algo como:
+# app/java/java (generated)/
+# app/res/res (generated)/
+
+# Archivos de caché de depuración/prueba
+.navigation

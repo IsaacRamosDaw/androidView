@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sports_name">
+        <item>Fútbol</item>
+        <item>Baloncesto</item>
+        <item>Tenis</item>
+        <item>Natación</item>
+        <item>Atletismo</item>
+    </string-array>
+    <string-array name="sports_description">
+        <item>El deporte de equipo más popular del mundo, jugado con un balón y dos porterías. Fomenta el trabajo en equipo y la estrategia.</item>
+        <item>Un juego dinámico de cancha que requiere saltar y lanzar el balón a una canasta elevada. Ideal para mejorar la coordinación.</item>
+        <item>Deporte de raqueta jugado por dos o cuatro personas en una pista. Conocido por la precisión y el aguante físico.</item>
+        <item>Actividad acuática completa que mejora la resistencia cardiovascular y la fuerza muscular sin impacto articular.</item>
+        <item>Conjunto de pruebas deportivas (carreras, saltos y lanzamientos) que son la base de los Juegos Olímpicos. Requiere disciplina.</item>
+    </string-array>
+</resources>
