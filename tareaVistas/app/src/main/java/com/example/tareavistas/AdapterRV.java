@@ -13,6 +13,7 @@ import java.util.List;
 
 public class AdapterRV extends RecyclerView.Adapter<AdapterRV.vh> {
 
+    // Objeto que rellena un layout e inicia el viewHolder
     private final Context c;
     private final List<Deporte> deportes;
 
@@ -34,14 +35,13 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.vh> {
     // 2. Vincula los datos del objeto Deporte a las vistas de la fila
     @Override
     public void onBindViewHolder(@NonNull AdapterRV.vh holder, final int position) {
-
-        // Asigna el nombre del deporte (usa el Getter)
+        // Asigna el nombre del deporte
         holder.nameDeporte.setText(deportes.get(position).getName());
 
-        // ⚠️ La lógica del botón eliminar ha sido eliminada por completo.
     }
 
     // 3. Devuelve el número total de elementos
+    // Método del adapter
     @Override
     public int getItemCount() {
         return deportes.size();
@@ -56,14 +56,14 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.vh> {
             super(itemView);
 
             // Encuentra el TextView por su ID en item.xml
-            // Si el ID en tu item.xml es 'film_name', mantenlo así.
+            // Si el ID en tu item.xml.
             nameDeporte = itemView.findViewById(R.id.sportName);
 
             // 4. Implementación del Click para Abrir la Vista de Detalle
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int position = getAdapterPosition();
+                    int position = getAbsoluteAdapterPosition();
 
                     if (position != RecyclerView.NO_POSITION) {
                         Deporte selectedDeporte = deportes.get(position);
@@ -74,7 +74,6 @@ public class AdapterRV extends RecyclerView.Adapter<AdapterRV.vh> {
                         // Pasar Nombre y Descripción (usando Getters)
                         intent.putExtra("EXTRA_NAME", selectedDeporte.getName());
                         intent.putExtra("EXTRA_DESC", selectedDeporte.getDescription());
-                        intent.putExtra("EXTRA_IMAGE", 0); // Imagen omitida
 
                         c.startActivity(intent);
                     }
